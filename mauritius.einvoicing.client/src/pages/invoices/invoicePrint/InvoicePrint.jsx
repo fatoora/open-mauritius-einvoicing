@@ -158,7 +158,7 @@ function InvoicePrint() {
                         <img src={logo} width='50' style={{ marginRight: '-26px', marginTop:'-12px' }} />
                     </Col>
                     <Col xs={9} md={9} lg={9} className="d-flex justify-content-start">
-                        <h1 className='text-center' style={{ fontWeight: 'bold' }}>EMPAK (AFRICA) LIMITED</h1>
+                        <h1 className='text-center' style={{ fontWeight: 'bold' }}>DEVBEE PRIVATE LIMITED</h1>
                     </Col>
                    <hr />
                  </Row>
@@ -430,35 +430,33 @@ function InvoicePrint() {
 
             <div className='footer' style={{ position: 'fixed', bottom: 0, width: '100%', background: 'white', fontSize: '15px' }}>
                 <hr className='color-black mb-0' />
-                <div className="container-fluid py-2">
+                {/* <div className="container-fluid py-2">
                     <div className="row mt-1">
                         <div className="col-md-4">
-                            <p className="mb-0">Warehouse No.1, Freeport Zone 7, Mer Rouge, Port Louis, Mauritius</p>
+                            <p className="mb-0"></p>
                         </div>
                     </div>
                     <div className="row mt-1">
                         <div className="col-9">
-                            <p className="mb-0">Phone No.: +230 2176143, +230 2176147, +230 2176150, +230 2176152</p>
+                            <p className="mb-0"></p>
                         </div>
                         <div className="col-3">
-                            <p className="mb-0">Fax No.: +230 2176475</p>
+                            <p className="mb-0"></p>
                         </div>
                     </div>
                     <div className="row mt-1">
                         <div className="col-4">
-                            <p className="mb-0"><span className='clr-red'>AN</span> <b>IFFCO</b> <span className='clr-red'>GROUP COMPANY</span></p>
+                            <p className="mb-0"></p>
                         </div>
                         <div className="col-4 d-flex justify-content-start bg-red">
-                            <p className="mb-0" style={{ marginLeft: '-10px'} }>INVESTING IN THE FUTURE</p>
+                            <p className="mb-0" style={{ marginLeft: '-10px'} }></p>
                         </div>
                         <div className="col-4 text-end bg-red">
-                            <a href="http://www.iffco.com" style={{ textDecoration: 'none' }} className='text-white'>www.iffco.com</a>
+                            <a href="" style={{ textDecoration: 'none' }} className='text-white'></a>
                         </div>
                     </div>
-                    </div>
-                </div>
-           
-           
+                </div> */}
+            </div>
         </div>
     );
 }
