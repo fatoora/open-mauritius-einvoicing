@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Mauritius.EInvoicing
+/mauritius.einvoicing.client/obj/Debug
+/Mauritius.EInvoicing.Server/bin/Debug/net8.0
+/Mauritius.EInvoicing.Server/obj
+/Mauritius.EInvoicing.Server/Mauritius.EInvoicing.Server.csproj.user
+/node_modules
+/.vs/ProjectEvaluation
+# /mauritius.einvoicing.client/yarn.lock

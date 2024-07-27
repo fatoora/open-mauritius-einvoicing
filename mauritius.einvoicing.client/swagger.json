@@ -1,0 +1,526 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Mauritius.EInvoicing.Server",
+      "version": "1.0"
+    },
+    "paths": {
+      "/Device/OnBoard": {
+        "post": {
+          "tags": [
+            "Device"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeviceOnboardingRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeviceOnboardingRequest"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeviceOnboardingRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/InvoiceRequest/Submit": {
+        "post": {
+          "tags": [
+            "Invoice"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceRequest"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Party/AddBuyer": {
+        "post": {
+          "tags": [
+            "Party"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Buyer"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Buyer"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Buyer"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Party/GetBuyer": {
+        "get": {
+          "tags": [
+            "Party"
+          ],
+          "parameters": [
+            {
+              "name": "buyerId",
+              "in": "query",
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Buyer"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Buyer"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Buyer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/Party/GetAllBuyers": {
+        "get": {
+          "tags": [
+            "Party"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Buyer"
+                    }
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Buyer"
+                    }
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Buyer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/Party/AddSeller": {
+        "post": {
+          "tags": [
+            "Party"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seller"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seller"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Seller"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Party/GetSeller": {
+        "get": {
+          "tags": [
+            "Party"
+          ],
+          "parameters": [
+            {
+              "name": "sellerId",
+              "in": "query",
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Seller"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Seller"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Seller"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/Party/GetAllSellers": {
+        "get": {
+          "tags": [
+            "Party"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Seller"
+                    }
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Seller"
+                    }
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Seller"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Buyer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "name": {
+              "type": "string",
+              "nullable": true
+            },
+            "address": {
+              "type": "string",
+              "nullable": true
+            },
+            "vatNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "brn": {
+              "type": "string",
+              "nullable": true
+            },
+            "phoneNo": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "DeviceOnboardingRequest": {
+          "type": "object",
+          "properties": {
+            "userName": {
+              "type": "string",
+              "nullable": true
+            },
+            "password": {
+              "type": "string",
+              "nullable": true
+            },
+            "ebsMraId": {
+              "type": "string",
+              "nullable": true
+            },
+            "areaCode": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "InvoiceRequest": {
+          "type": "object",
+          "properties": {
+            "deviceId": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "currency": {
+              "type": "string",
+              "nullable": true
+            },
+            "invoiceNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "totalVatAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmountWithoutVat": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmountPaid": {
+              "type": "number",
+              "format": "double"
+            },
+            "invoiceTotal": {
+              "type": "number",
+              "format": "double"
+            },
+            "sellerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "buyerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "lineItems": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LineItem"
+              },
+              "nullable": true
+            },
+            "noteReason": {
+              "type": "string",
+              "nullable": true
+            },
+            "invoiceReferenceNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "invoiceType": {
+              "$ref": "#/components/schemas/InvoiceType"
+            },
+            "salesOrderNo": {
+              "type": "string",
+              "nullable": true
+            },
+            "commodityCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "modeOfShipment": {
+              "type": "string",
+              "nullable": true
+            },
+            "portOfLoading": {
+              "type": "string",
+              "nullable": true
+            },
+            "portOfDischarge": {
+              "type": "string",
+              "nullable": true
+            },
+            "paymentTerms": {
+              "type": "string",
+              "nullable": true
+            },
+            "netWeight": {
+              "type": "string",
+              "nullable": true
+            },
+            "grossWeight": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "InvoiceType": {
+          "enum": [
+            "CREDIT_NOTE",
+            "DEBIT_NOTE",
+            "INVOICE"
+          ],
+          "type": "string"
+        },
+        "ItemTaxNature": {
+          "enum": [
+            "GOODS",
+            "SERVICES"
+          ],
+          "type": "string"
+        },
+        "LineItem": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "nullable": true
+            },
+            "taxCode": {
+              "$ref": "#/components/schemas/TaxCode"
+            },
+            "quantity": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nature": {
+              "$ref": "#/components/schemas/ItemTaxNature"
+            },
+            "unitPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmountWithoutVat": {
+              "type": "number",
+              "format": "double"
+            },
+            "vatAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmount": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Seller": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "nullable": true
+            },
+            "address": {
+              "type": "string",
+              "nullable": true
+            },
+            "vatNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "brn": {
+              "type": "string",
+              "nullable": true
+            },
+            "phoneNo": {
+              "type": "string",
+              "nullable": true
+            },
+            "id": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "TaxCode": {
+          "enum": [
+            "TC01",
+            "TC02",
+            "TC03"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }

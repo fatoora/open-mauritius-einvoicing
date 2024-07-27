@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  mra-einvoice:
+    container_name: mra-einvoice
+    image: ghcr.io/fatoora/mauritius-einvoicing/mra-einvoice:${API_VERSION}
+    environment:
+      ConnectionStrings__Repository: 'Server=192.168.1.37;Database=Mauritius;User ID=SA;Password=Pass@word;TrustServerCertificate=True'
+    ports:
+      - 6100:8080
+#     networks:
+#       - my_network
+#     depends_on:
+#       - mssql
+
+#   mssql:
+#     image: mcr.microsoft.com/mssql/server:2019-latest
+#     environment:
+#       ACCEPT_EULA: 'Y'
+#       SA_PASSWORD: 'Pass@word'
+#     ports:
+#       - "1433:1433"
+#     volumes:
+#       - efatoora-mssql-mount:/var/opt/mssql
+#     networks:
+#       - my_network
+# networks:
+#   my_network:
+#     driver: bridge
+# volumes:
+#   efatoora-mssql-mount:

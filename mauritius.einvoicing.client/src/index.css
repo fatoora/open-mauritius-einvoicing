@@ -1,0 +1,43 @@
+.currency{
+    text-align:right;
+}
+body {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.footer {
+    position: static; /* Change positioning for printing */
+    color: black; /* Ensure text is visible */
+    font-weight:600;
+}
+.bg-red {
+    background-color: #ee2d24 !important; /* Force background color */
+    color: white !important; /* Ensure text color is white */
+}
+.clr-red {
+    color: #ee2d24 !important; /* Force background color */
+}
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .footer {
+        position: static; /* Change positioning for printing */
+        color: black; /* Ensure text is visible */
+    }
+
+        .bg-red {
+            background-color: #ee2d24 !important; /* Force background color */
+            color: white !important; /* Ensure text color is white */
+        }
+    .clr-red {
+        color: #ee2d24 !important; /* Force background color */
+    }
+    .new-page {
+        page-break-before: always; /* Start a new page */
+        margin-top: 100px;
+    }
+}

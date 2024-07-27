@@ -1,0 +1,6 @@
+@Mauritius.EInvoicing.Server_HostAddress = http://localhost:5200
+
+GET {{Mauritius.EInvoicing.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
