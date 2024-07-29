@@ -41,3 +41,27 @@ body {
         margin-top: 100px;
     }
 }
+
+
+/*Water mark*/
+.watermark-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.5;
+    z-index: 1000; /* Ensure it's above other content */
+    pointer-events: none;  Disable pointer events like clicking 
+    user-select: none;  Disable text selection 
+ 
+
+}
+
+    .watermark-container img {
+        width: 80px; /* Adjust size as needed */
+       
+    }
+
+    .watermark-container p {
+       
+        font-size: 20px; /* Adjust font size as needed */
+    }
